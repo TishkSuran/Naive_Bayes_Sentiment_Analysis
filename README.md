@@ -3,7 +3,7 @@ Before we dissect this project, it is worth stating the formal definition of the
 <br>
 
 ### What is Baye's Therom?
-As previously mentioned, the Naive Bayes Classifier is based on Bayes' Therom, thus it is a logical step to first explain Bayes Therom for those who are not familiar. Bayes' Therom is a fundamental principle in probability theory. It provides a way to update probabilities based on new evidence. The therom can be expressed mathematically as follows:
+As previously mentioned, the Naive Bayes Classifier is based on Bayes' Theorem, thus it is a logical step to first explain Bayes Theorem for those who are not familiar. Bayes' Therom is a fundamental principle in probability theory. It provides a way to update probabilities based on new evidence. The therom can be expressed mathematically as follows:
 
 $\ P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)} \$
 
@@ -38,4 +38,9 @@ Where in this case:
 </ul>
 
 Thus the probability of having the disease given that the test result is positive is in fact only ≈0.0989%.
+
+### Application of Bayes' Theorem in Classification:
+Now that we have a general understanding of Bayes' Therom, let's see how it seamlessly integrates into the Naive Bayes Classifier for classification tasks. In the context of sentiment analysis, the goal is to classify input data into predefined classes or categories such as positive or negative sentiment.
+
+In the Naive Bayes Classifier, we apply Bayes' Theorem to calculate the probability of a particular class given the input features. The "naive" assumption in this classifier is that the features are conditionally independent, given the class. Despite the simplification, and as we will see, the Naive Bayes Classifier often performs quite well in practice.
 
