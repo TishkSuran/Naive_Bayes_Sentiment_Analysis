@@ -39,14 +39,14 @@ Where in this case:
 
 Thus the probability of having the disease given that the test result is positive is in fact only ≈0.0989%.
 <br>
-
+<br>
 
 ### Application of Bayes' Theorem in Classification:
 Now that we have a general understanding of Bayes' Theorem, let's see how it seamlessly integrates into the Naive Bayes Classifier for classification tasks. In the context of sentiment analysis, the goal is to classify input data into predefined classes or categories such as positive or negative sentiment.
 
 In the Naive Bayes Classifier, we apply Bayes' Theorem to calculate the probability of a particular class given the input features. The "naive" assumption in this classifier is that the features are conditionally independent, given the class. Despite the simplification, and as we will see, the Naive Bayes Classifier often performs quite well in practice.
 <br>
-
+<br>
 
 ### Example Usage of Naive Bayes Classification:
 The best way to help you understand the Naive Bayes Classification system is through an example. In this example, we will be classifying emails as either spam or not spam. 
