@@ -63,23 +63,25 @@ class NaiveBayesClassifier:
                     
         prediction = max(scores, key=scores.get)
         return prediction
+    
+def evaluate_accuracy(classifier, X_test, y_test):
+    correct_predictions = 0
+    total_predictions = len(X_test)
+
+    for doc, true_label in zip(X_test, y_test):
+        predicted_label = classifier.predict(doc)
+        if predicted_label == true_label:
+            correct_predictions += 1
+
+    accuracy = correct_predictions / total_predictions
+    print(f"Accuracy: {accuracy}")
+
 
 X_train, X_test, y_train, y_test = train_test_split(documents, labels, test_size=0.2, random_state=42)
-
-
 classifier = NaiveBayesClassifier()
 classifier.train(X_train, y_train, alpha=1)
+evaluate_accuracy(classifier, X_test, y_test)
 
-correct_predictions = 0
-total_predictions = len(X_test)
-
-for doc, true_label in zip(X_test, y_test):
-    predicted_label = classifier.predict(doc)
-    if predicted_label == true_label:
-        correct_predictions += 1
-
-accuracy = correct_predictions / total_predictions
-print(f"Accuracy: {accuracy}")
 
 
 while True:
