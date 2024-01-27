@@ -100,3 +100,10 @@ The class with the highest probability is the predicted class. If the probabilit
 <br>
 ### Naive Bayes Sentiment Classifier:
 Now that you know what Bayes' Theorem is as well as it's application in classification, we can now finally start breaking down the naive bayes sentiment classifier script. 
+
+```python
+class NaiveBayesClassifier:
+    def __init__(self):
+        self.class_probabilities = {}
+        self.word_probabilities = {}
+```
