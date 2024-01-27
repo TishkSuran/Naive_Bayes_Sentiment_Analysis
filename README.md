@@ -38,6 +38,7 @@ Where in this case:
 </ul>
 
 Thus the probability of having the disease given that the test result is positive is in fact only ≈0.0989%.
+<br>
 
 ### Application of Bayes' Theorem in Classification:
 Now that we have a general understanding of Bayes' Therom, let's see how it seamlessly integrates into the Naive Bayes Classifier for classification tasks. In the context of sentiment analysis, the goal is to classify input data into predefined classes or categories such as positive or negative sentiment.
