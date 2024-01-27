@@ -4,8 +4,8 @@ from math import log
 from data import documents, labels
 from sklearn.model_selection import train_test_split
 
-print("Length of documents:", len(documents))
-print("Length of labels:", len(labels))
+print("Data set size:", len(documents))
+
 
 class NaiveBayesClassifier:
     def __init__(self):
@@ -14,7 +14,7 @@ class NaiveBayesClassifier:
 
     def preprocess_text(self, text):
         text = re.sub(r'[^a-zA-Z0-9\s]', '', text.lower())
-        stop_words = set(['the', 'this', 'I', 'as'])
+        stop_words = set(['the', 'this', 'i', 'as', 'its', 'it', 'and', 'is', 'for', 'in', 'of', 'to', 'with', 'on', 'at', 'by', 'an', 'product'])
         words = [word for word in text.split() if word not in stop_words]
         return ' '.join(words)
 
@@ -74,15 +74,13 @@ def evaluate_accuracy(classifier, X_test, y_test):
             correct_predictions += 1
 
     accuracy = correct_predictions / total_predictions
-    print(f"Accuracy: {accuracy}")
+    print(f"Accuracy: {round(accuracy,4)}")
 
 
-X_train, X_test, y_train, y_test = train_test_split(documents, labels, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(documents, labels, test_size=0.2, random_state=20)
 classifier = NaiveBayesClassifier()
 classifier.train(X_train, y_train, alpha=1)
 evaluate_accuracy(classifier, X_test, y_test)
-
-
 
 while True:
     test_document = input("Please write a review of the product: ")
