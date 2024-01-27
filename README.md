@@ -85,13 +85,13 @@ We calculate the likelihoods based on our training data.
 Calculate the unnormalised probability for each class:<br>
 
 For $C_1$:<br>
-$P(C_1) \cdot P(X_1=\text{True}|C_1) \cdot P(X_2=\text{False}|C_1) = 0.3 \cdot 0.8 \cdot 0.2$<br>
+$P(C_1) \cdot P(X_1=\text{True}|C_1) \cdot P(X_2=\text{False}|C_1) = 0.3 \cdot 0.8 \cdot 0.2 = 0.048$<br>
 
 For $C_2$:<br>
-$P(C_2) \cdot P(X_1=\text{True}|C_2) \cdot P(X_2=\text{False}|C_2) = 0.7 \cdot 0.1 \cdot 0.9$<br>
+$P(C_2) \cdot P(X_1=\text{True}|C_2) \cdot P(X_2=\text{False}|C_2) = 0.7 \cdot 0.1 \cdot 0.9 = 0.063$<br>
 
 Normalise the probabilities so they sum to 1.<br>
 
-The class with the highest probability is the predicted class. If the probability for $C_1$ is higher, we classify the email as spam; otherwise, it's not spam.
+The class with the highest probability is the predicted class. If the probability for $C_1$ is higher, we classify the email as spam; otherwise, it's not spam. In this case, if an email is received with the word "offer" but not "money", it will be classified as not spam.
 
 
