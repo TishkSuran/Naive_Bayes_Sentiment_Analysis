@@ -57,6 +57,17 @@ Let's say we have a new email with the following features:
 And we have two classes:
 
 <ol>
-  <li>$</li>
+  <li>$C₁$: Spam</li>
+  <li>$C₂$: Not Spam</li>
 </ol>
 
+Now lets say we have a new email with the following features
+<ul>
+  <li>$X₁$: True, contains the word "offer".</li>
+  <li>$X₂$: False, does not contain the word "money".</li>
+</ul>
+
+We want to classify this email as either spam or not spam using Naive Bayes.
+
+<strong>Step 1: Prior Probabilities, $P(C₁) and P(C₂):$</strong>
+Suppose in our training data, 30% of emails are spam, $P(C₁) = 0.3$, and 70% are not spam, $P(C₂) = 0.7$.
