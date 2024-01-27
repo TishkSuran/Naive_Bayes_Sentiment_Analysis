@@ -7,9 +7,9 @@ As previously mentioned, the Naive Bayes Classifier is based on Bayes' Therom, t
 $\ P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)} \$
 
 Where:
-<ol>
+<ul>
   <li>$P(A|B)$ is the probability of event A given that event B has occured.</li>
   <li>$P(B|A)$ is the probability of event B given that event A has occured.</li>
   <li>$P(A)$ is the prior probability of event A.</li>
   <li>$P(B)$ is the prior probability of event B.</li>
-</ol>
+</ul>
