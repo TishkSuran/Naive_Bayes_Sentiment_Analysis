@@ -35,3 +35,6 @@ Where in this case:
   <li>$P(B)$ is the probability of a positive test result. So we must take into account both the true positives and the false positives. Therefor $P(B) = (0.99 * 0.0001) + (0.01 * 0.9999).$</li>
 </ul>
 
+Thus:
+$\P(A | B) = \frac{0.99 \times 10,000}{1} + \frac{0.01 \times \frac{10,000}{9,999}}{0.99 \times 10,000} \$
+
