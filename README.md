@@ -65,18 +65,20 @@ Now lets say we have a new email with the following features
 <ul>
   <li>$X₁$: True, contains the word "offer".</li>
   <li>$X₂$: False, does not contain the word "money".</li>
-
-**Step 2: Likelihoods** ( $ P(X_1 = \text{True} | C_1) $ and $ P(X_2 = \text{False} | C_1) $ ):
-
-We calculate the likelihoods based on our training data.
-- $ P(X_1 = \text{True} | C_1) $ might be 0.8 (80% of spam emails contain the word "offer").
-- $ P(X_2 = \text{False} | C_1) $ might be 0.2 (20% of spam emails do not contain the word "money").
-- $ P(X_1 = \text{True} | C_2) $ might be 0.1 (10% of non-spam emails contain the word "offer").
-- $ P(X_2 = \text{False} | C_2) $ might be 0.9 (90% of non-spam emails do not contain the word "money").
-
 </ul>
 
 We want to classify this email as either spam or not spam using Naive Bayes.
 
 <strong>Step 1: Prior Probabilities, $P(C₁) and P(C₂):$</strong><br>
 Suppose in our training data, 30% of emails are spam, $P(C₁) = 0.3$, and 70% are not spam, $P(C₂) = 0.7$.
+
+<strong>Step 2: Likelihoods, $P(X₁|C_i)$ and $P(X₂|C_i)$:</strong>
+
+We calculate the likelihoods based on our training data.
+- $P(X₁=\text{True}|C₁)$ might be 0.8 (80% of spam emails contain the word "offer").
+- $P(X₂=\text{False}|C₁)$ might be 0.2 (20% of spam emails do not contain the word "money").
+- $P(X₁=\text{True}|C₂)$ might be 0.1 (10% of non-spam emails contain the word "offer").
+- $P(X₂=\text{False}|C₂)$ might be 0.9 (90% of non-spam emails do not contain the word "money").
+
+
+
