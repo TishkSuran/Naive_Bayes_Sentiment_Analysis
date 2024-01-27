@@ -111,6 +111,7 @@ class NaiveBayesClassifier:
 ```
 This Python script implements a Naive Bayes classifier for sentiment analysis. The <strong>'NaiveBayesClassifier"</strong> class is designed to analyse and predict sentiment labels based on a given set of training data. This class is initialised with empty dictionaries for <strong>'class_probabilities'</strong> and <strong>'word_probabilities'</strong>. 
 <br>
+<br>
 ### Pre-Processing Test:
 ```python
     def preprocess_text(self, text):
@@ -119,6 +120,31 @@ This Python script implements a Naive Bayes classifier for sentiment analysis. T
         words = [word for word in text.split() if word not in stop_words]
         return ' '.join(words)
 ```
-The <strong>'preprocess_text'</strong> function takes a raw text input and performs several preprocessing steps to prepare it for sentiment analysis. It first removes all non alphanumerical characters and converts the entire text to lower case. It then eliminates any common stop words, such as articles and prepositions. The processed text is then tokenised into individual words, and a final string is constructed by joining these words. The output is a cleaned and normalised representation of input text.
+The <strong>'preprocess_text'</strong> method takes a raw text input and performs several preprocessing steps to prepare it for sentiment analysis. It first removes all non alphanumerical characters and converts the entire text to lower case. It then eliminates any common stop words, such as articles and prepositions. The processed text is then tokenised into individual words, and a final string is constructed by joining these words. The output is a cleaned and normalised representation of input text.
 <br>
+<br>
+```python
+    def tokenise(self, text):
+        return text.split()
+```
+This <strong>'tokenise'</strong> method simply takes text input and tokenises it by splitting it into individual words using the <strong>'split()</strong> method which seperates the input text into a list of words based on whitespace.
+<br>
+<br>
+### Counting the Occurrences of Words:
+```python
+    def count_words(self, documents, labels):
+        word_counts = {}
+        label_counts = Counter(labels)
+        
+        for doc, label in zip(documents, labels):
+            words = self.tokenise(self.preprocess_text(doc))
+            for word in words:
+                if word not in word_counts:
+                    word_counts[word] = {}
+                if label not in word_counts[word]:
+                    word_counts[word][label] = 1
+                else:
+                    word_counts[word][label] += 1
+```
+This method is responsible for tallying the occurrences of words within the training documents, categorised by their associated sentiment labels. This function initialises two dictionaries, <strong>'word_counts'</strong> and <strong>'label_counts</strong> to store the counts of each label and the total counts for each label, respectively. 
 
