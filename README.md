@@ -30,9 +30,8 @@ $\ P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)} \$
 
 Where in this case:
 <ul>
-  <li>$P(A|B)$ is the probability of event A given that event B has occured.</li>
-  <li>$P(B|A)$ is the probability of event B given that event A has occured.</li>
+  <li>$P(B|A)$ is the probability of obtaining a positive test result, given the person actually has the disease. In this example, the test is said to be 99% accurate, meaning it is correct 99% of the time. Thus the probability of the test being positive in the event you have the disease is 0.99</li>
   <li>$P(A)$ = 0.0001, since 1 in 10,000 people have the disease initially.</li>
-  <li>$P(B)$ is the probability of a positive test result. So we must take into account both the true positives and the false positives. Therfore $P(B) = (0.99 * 0.0001) + (0.01 * 0.9999).$</li>
+  <li>$P(B)$ is the probability of a positive test result. So we must take into account both the true positives and the false positives. Therefor $P(B) = (0.99 * 0.0001) + (0.01 * 0.9999).$</li>
 </ul>
 
