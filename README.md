@@ -14,6 +14,7 @@ Where:
   <li>$P(B)$ is the prior probability of event B.</li>
 </ul>
 <br>
+
 ### Example Usage of Bayes Therom:
 Suppose there is a rare disease, let's call it Disease X, that affects 1 in 10,000 people. A new test has been developed to detect the presence of Disease X. The text is 99% accurate, meaning that it correctly identifies individuals with the disease 99% of the time, and it has a 1% false positive rate, meaning it incorrectly identifies healthy individuals as having the disease 1% of the time.
 
