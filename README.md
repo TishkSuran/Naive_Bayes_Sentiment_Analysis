@@ -96,5 +96,7 @@ $P(C_2) \cdot P(X_1=\text{True}|C_2) \cdot P(X_2=\text{False}|C_2) = 0.7 \cdot 0
 Normalise the probabilities so they sum to 1.<br>
 
 The class with the highest probability is the predicted class. If the probability for $C_1$ is higher, we classify the email as spam; otherwise, it's not spam. In this case, if an email is received with the word "offer" but not "money", it will be classified as not spam.
-
-
+<br>
+<br>
+### Naive Bayes Sentiment Classifier:
+Now that you know what Bayes' Theorem is as well as it's application in classification, we can now finally start breaking down the naive bayes sentiment classifier script. 
