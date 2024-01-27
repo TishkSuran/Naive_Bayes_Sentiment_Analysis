@@ -36,5 +36,5 @@ Where in this case:
 </ul>
 
 Thus:
-$\P(A | B) = \frac{0.99 \times 10,000}{1} + \frac{0.01 \times \frac{10,000}{9,999}}{0.99 \times 10,000} \$
+$P(A | B) = \frac{0.99 \times 10,000}{1} + \frac{0.01 \times \frac{10,000}{9,999}}{0.99 \times 10,000} \$ which is equal to 
 
