@@ -100,10 +100,25 @@ The class with the highest probability is the predicted class. If the probabilit
 <br>
 ### Naive Bayes Sentiment Classifier:
 Now that you know what Bayes' Theorem is as well as it's application in classification, we can now finally start breaking down the naive bayes sentiment classifier script. 
-
+<br>
+<br>
+### Defining the Naive Bayes' Classifier Class:
 ```python
 class NaiveBayesClassifier:
     def __init__(self):
         self.class_probabilities = {}
         self.word_probabilities = {}
 ```
+This Python script implements a Naive Bayes classifier for sentiment analysis. The <strong>'NaiveBayesClassifier"</strong> class is designed to analyse and predict sentiment labels based on a given set of training data. This class is initialised with empty dictionaries for <strong>'class_probabilities'</strong> and <strong>'word_probabilities'</strong>. 
+<br>
+### Pre-Processing Test:
+```python
+    def preprocess_text(self, text):
+        text = re.sub(r'[^a-zA-Z0-9\s]', '', text.lower())
+        stop_words = set(['the', 'this', 'i', 'as', 'its', 'it', 'and', 'is', 'for', 'in', 'of', 'to', 'with', 'on', 'at', 'by', 'an', 'product'])
+        words = [word for word in text.split() if word not in stop_words]
+        return ' '.join(words)
+```
+The <strong>'preprocess_text'</strong> function takes a raw text input and performs several preprocessing steps to prepare it for sentiment analysis. It first removes all non alphanumerical characters and converts the entire text to lower case. It then eliminates any common stop words, such as articles and prepositions. The processed text is then tokenised into individual words, and a final string is constructed by joining these words. The output is a cleaned and normalised representation of input text.
+<br>
+
