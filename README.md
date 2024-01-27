@@ -39,5 +39,5 @@ Where in this case:
 
 Thus:
 <br>
-$P(A|B)$ = $\1frac1011$
+$P(A|B) ≈ 0.0989%$ which represents the probability of having the disease if your test is positive. 
 
