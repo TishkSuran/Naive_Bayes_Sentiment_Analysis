@@ -13,6 +13,7 @@ Where:
   <li>$P(A)$ is the prior probability of event A.</li>
   <li>$P(B)$ is the prior probability of event B.</li>
 </ul>
+
 <br>
 
 ### Example Usage of Bayes Therom:
