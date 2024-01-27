@@ -1,2 +1,2 @@
 ## What is the Naive Bayes Classifier? 
-Before we disect this project, it was worth stating the formal definition of the Naive Bayes Classifier, which is the algroithm used for sentiment analysis. 
+Before we dissect this project, it is worth stating the formal definition of the Naive Bayes Classifier, the algorithm used for sentiment analysis. The Naive Bayes Classifier is a probabilistic machine learning algorithm based on Bayes' Theorem. It is employed primarily for classification tasks, as it is in this project, where the goal is to categorise input data into predefined classes or categories. Despite its simplicity and the "naive" assumption, the Naive Bayes Classifier performs well in practice and is computationally efficient.
