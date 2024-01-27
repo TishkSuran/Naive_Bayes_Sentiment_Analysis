@@ -4,6 +4,4 @@ Before we dissect this project, it is worth stating the formal definition of the
 ### What is Baye's Therom?
 As previously mentioned, the Naive Bayes Classifier is based on Bayes' Therom, thus it is a logical step to first explain Bayes Therom for those who are not familiar. Bayes' Therom is a fundamental principle in probability theory. It provides a way to update probabilities based on new evidence. The therom can be expressed mathematically as follows:
 
-$P(A∣B)= 
-P(B)
-P(B∣A)⋅P(A)$
+\[ P(A|B) = \frac{P(B)}{P(B|A) \cdot P(A)} \]
