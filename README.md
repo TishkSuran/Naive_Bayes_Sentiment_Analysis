@@ -13,3 +13,26 @@ Where:
   <li>$P(A)$ is the prior probability of event A.</li>
   <li>$P(B)$ is the prior probability of event B.</li>
 </ul>
+
+### Example Usage of Bayes Therom:
+Suppose there is a rare disease, let's call it Disease X, that affects 1 in 10,000 people. A new test has been developed to detect the presence of Disease X. The text is 99% accurate, meaning that it correctly identifies individuals with the disease 99% of the time, and it has a 1% false positive rate, meaning it incorrectly identifies healthy individuals as having the disease 1% of the time.
+
+Now, let's say you take the test and it comes back positive. What is the probability that you actually have the disease? We can use Bayes' Therom to calculate this, let...
+
+<ul>
+  <li><strong>A</strong> be the event that you have the disease (Disease X).</li>
+  <li><strong>B</strong> be the event that the test is positive.</li>
+</ul>
+
+Remember the formula for Bayes' Therom is:
+
+$\ P(A|B) = \frac{P(B|A) \cdot P(A)}{P(B)} \$
+
+Where in this case:
+<ul>
+  <li>$P(A|B)$ is the probability of event A given that event B has occured.</li>
+  <li>$P(B|A)$ is the probability of event B given that event A has occured.</li>
+  <li>$P(A)$ = 0.0001, since 1 in 10,000 people have the disease initially.</li>
+  <li>$P(B)$ is the probability of a positive test result. So we must take into account both the true positives and the false positives. Therfore $P(B) = (0.99 * 0.0001) + (0.01 * 0.9999).$</li>
+</ul>
+
