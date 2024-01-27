@@ -80,5 +80,22 @@ We calculate the likelihoods based on our training data.
 - $P(X₁=\text{True}|C₂)$ might be 0.1 (10% of non-spam emails contain the word "offer").
 - $P(X₂=\text{False}|C₂)$ might be 0.9 (90% of non-spam emails do not contain the word "money").
 
+<strong>Step 3: Applying Naive Bayes:</strong>
+
+Calculate the unnormalized probability for each class:
+
+For $C_1$:
+$$
+P(C_1) \cdot P(X_1=\text{True}|C_1) \cdot P(X_2=\text{False}|C_1) = 0.3 \cdot 0.8 \cdot 0.2
+$$
+
+For $C_2$:
+$$
+P(C_2) \cdot P(X_1=\text{True}|C_2) \cdot P(X_2=\text{False}|C_2) = 0.7 \cdot 0.1 \cdot 0.9
+$$
+
+Normalize the probabilities so they sum to 1.
+
+The class with the highest probability is the predicted class. If the probability for $C_1$ is higher, we classify the email as spam; otherwise, it's not spam.
 
 
