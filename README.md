@@ -148,4 +148,7 @@ This <strong>'tokenise'</strong> method simply takes text input and tokenises it
         return(word_counts, label_counts)
 ```
 This method is responsible for tallying the occurrences of words within the training documents, categorised by their associated sentiment labels. This function initialises two dictionaries, <strong>'word_counts'</strong> and <strong>'label_counts</strong> to store the counts of each label and the total counts for each label, respectively. The method then iterates through each document-label pair in the training data, pre processes and tokenises the document using the previous methods and updates the <strong>'word_counts'</strong> dictionary. For each word encountered, the method ensures that the word is presnet in the directory and increments its count for the corresponding label. This process establishes a count of how often each word appears in doucmnets associated with different sentiment labels, forming the basis for following probability calculations during the training phase of the Naive Bayes classifier. 
+<br>
+<br>
+### Training the Classifier:
 
