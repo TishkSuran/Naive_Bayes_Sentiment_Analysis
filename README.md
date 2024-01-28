@@ -151,4 +151,46 @@ This method is responsible for tallying the occurrences of words within the trai
 <br>
 <br>
 ### Training the Classifier:
+```python
+    def predict(self, document):
+        document = self.preprocess_text(document)
+        words = self.tokenise(document)
+        
+        scores = {label: log(prob) for label, prob in self.class_probabilities.items()}
+        
+        for word in words:
+            if word in self.word_probabilities:
+                for label, prob in self.word_probabilities[word].items():
+                    scores[label] += log(prob)
+                    
+        prediction = max(scores, key=scores.get)
+        return prediction
+```
+This <strong>predict</strong> method takes the document as its input, preprocesses it and tokenises it using the methods defined above. It then initialises scores for each of the sentiment labels based on logarithms and class probabilities. For each word in the tokenised document, it will update the scores using logarithms of word probabilities associated with each label. The method then selects the sentiment lavel with the highest score as the predicted sentiment for the input document. Logs are used to help with numerical stability, particularly to mitigate issues associated with very small probabilities. 
+<br>
+<br>
+### The Remainder of the Code 
+```python
+def evaluate_accuracy(classifier, X_test, y_test):
+    correct_predictions = 0
+    total_predictions = len(X_test)
 
+    for doc, true_label in zip(X_test, y_test):
+        predicted_label = classifier.predict(doc)
+        if predicted_label == true_label:
+            correct_predictions += 1
+
+    accuracy = correct_predictions / total_predictions
+    print(f"Accuracy: {round(accuracy,4)}")
+
+X_train, X_test, y_train, y_test = train_test_split(documents, labels, test_size=0.2, random_state=20)
+classifier = NaiveBayesClassifier()
+classifier.train(X_train, y_train, alpha=1)
+evaluate_accuracy(classifier, X_test, y_test)
+
+while True:
+    test_document = input("Please write a review of the product: ")
+    prediction = classifier.predict(test_document)
+    print(f"Predicted sentiment: {prediction}")
+```
+The remaining code is dedicated to assessing the model's accuracy through the separation of documents and labels into training and testing datasets. The concluding segment establishes a user interaction loop, enabling users to engage with the script and input product reviews for sentiment prediction.
