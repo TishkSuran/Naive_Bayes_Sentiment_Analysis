@@ -37,7 +37,7 @@ Where in this case:
   <li>$P(B)$ is the probability of a positive test result. So we must take into account both the true positives and the false positives. Therefor $P(B) = (0.99 * 0.0001) + (0.01 * 0.9999).$</li>
 </ul>
 
-Thus the probability of having the disease given that the test result is positive is in fact only ≈0.0989%.
+Thus the probability of having the disease given that the test result is positive is in fact only ≈0.989%.
 <br>
 <br>
 
