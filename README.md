@@ -120,6 +120,9 @@ This Python script implements a Naive Bayes classifier for sentiment analysis. T
         words = [word for word in text.split() if word not in stop_words]
         return ' '.join(words)
 ```
+<br>
+<br>
+### Tokenising the Text: 
 The <strong>'preprocess_text'</strong> method takes a raw text input and performs several preprocessing steps to prepare it for sentiment analysis. It first removes all non alphanumerical characters and converts the entire text to lower case. It then eliminates any common stop words, such as articles and prepositions. The processed text is then tokenised into individual words, and a final string is constructed by joining these words. The output is a cleaned and normalised representation of input text.
 <br>
 <br>
