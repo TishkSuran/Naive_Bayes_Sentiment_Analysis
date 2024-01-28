@@ -112,7 +112,7 @@ class NaiveBayesClassifier:
 This Python script implements a Naive Bayes classifier for sentiment analysis. The <strong>'NaiveBayesClassifier"</strong> class is designed to analyse and predict sentiment labels based on a given set of training data. This class is initialised with empty dictionaries for <strong>'class_probabilities'</strong> and <strong>'word_probabilities'</strong>. 
 <br>
 <br>
-### Pre-Processing Test:
+### Pre-Processing Text:
 ```python
     def preprocess_text(self, text):
         text = re.sub(r'[^a-zA-Z0-9\s]', '', text.lower())
@@ -122,6 +122,7 @@ This Python script implements a Naive Bayes classifier for sentiment analysis. T
 ```
 <br>
 <br>
+
 ### Tokenising the Text: 
 The <strong>'preprocess_text'</strong> method takes a raw text input and performs several preprocessing steps to prepare it for sentiment analysis. It first removes all non alphanumerical characters and converts the entire text to lower case. It then eliminates any common stop words, such as articles and prepositions. The processed text is then tokenised into individual words, and a final string is constructed by joining these words. The output is a cleaned and normalised representation of input text.
 <br>
